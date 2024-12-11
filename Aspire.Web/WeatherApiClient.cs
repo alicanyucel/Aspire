@@ -18,7 +18,7 @@ public class WeatherApiClient(HttpClient httpClient)
                 forecasts.Add(forecast);
             }
         }
-
+        await httpClient.GetAsync("https://localhost:7592/test");
         return forecasts?.ToArray() ?? [];
     }
 }

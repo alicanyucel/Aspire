@@ -38,7 +38,9 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
-
+app.MapGet("/test", () =>{
+    throw new ArgumentException("hata var");
+});
 app.MapDefaultEndpoints();
 app.Run();
 
